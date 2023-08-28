@@ -12,14 +12,13 @@
   gtag('config', 'AW-11281126893');
 </script>
 
-<!-- Event snippet for Chat conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+
 <script>
-    function gtag_report_conversion(url) {
+    function gtag_report_conversion() {
       var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
+        // Puedes agregar el enlace de WhatsApp aquí
+        var whatsappLink = "https://api.whatsapp.com/send/?phone=5491153691016";
+        window.location = whatsappLink;
       };
       gtag('event', 'conversion', {
           'send_to': 'AW-11281126893/RnCUCKDLstcYEO2roYMq',
@@ -27,7 +26,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       });
       return false;
     }
-    </script>
+</script>
+
 
 
 <!-- Event snippet for Formulario. conversion page -->
